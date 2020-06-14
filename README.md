@@ -11,7 +11,7 @@ From my experience, even basic structural and material engineering analyses and 
 Project-specific inquiries can be sent to structmattool@gmail.com
 
 # Equations
-- Strain
+- Strain [ADDED]
 - Stress
 - Yield Strength
 - Transverse Strain
