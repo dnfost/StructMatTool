@@ -9,3 +9,41 @@ From my experience, even basic structural and material engineering analyses and 
 
 # Want to help ?
 Project-specific inquiries can be sent to structmattool@gmail.com
+
+# Equations
+- Strain
+- Stress
+- Yield Strength
+- Transverse Strain
+- Transverse Stress
+- Shear Stress
+- Shear Strain
+- Shear Modulus (Isotropic Materials)
+- Biaxial Load Strain
+- Biaxial Load Stress
+- Coefficient of Thermal Expansion
+- Thermal Strain
+- Rule of Mixtures
+- Hoop Stress
+- Longitudinal Stress
+- Hoop Strain
+- Longitudinal Strain
+- Torsional Moment
+- Shear Flow
+- Transverse Shear Force
+- Normal Forces in Spar Caps
+- Tension Failure
+- Buckling Failure
+- Natural Frequency
+- Axial Stress
+- Lateral Stress
+- Total Stress
+- Allowable Stress
+- Axial Spring Constant
+- Lateral Spring Constant
+- Stress Concentration Factor
+- Critical Crack Stress
+- Net Section Tension Failure
+- Bearing Failure
+- Shear Tear Out Failure
+- Bolt Shear Failure
