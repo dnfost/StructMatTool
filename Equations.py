@@ -1,8 +1,16 @@
-def strain(elongation, original_length, sigma, elastic_modulus):
+def strain(elongation, original_length, new_length, sigma, elastic_modulus):
 
     if(elongation and original_length):
 
         return elongation/original_length
+
+    elif(elongation and new_length):
+
+        return elongation/(new_length - elongation)
+
+    elif(original_length and new_length):
+
+        return (new_length - original_length)/original_length
 
     elif(sigma and elastic_modulus):
 
@@ -10,13 +18,13 @@ def strain(elongation, original_length, sigma, elastic_modulus):
 
     elif(stress):
 
-        return stress/elastic_modulus
+        strain(None, None, None, stress, elastic_modulus)
 
     else:
 
         print("Not enough information provided to calculate strain.")
-        return 0
+        return None
 
 if __name__ == "__main__":
 
-    print(strain(2, 1000, None, None))
+    print(strain(None, 2, 2.02, None, None))
