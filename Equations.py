@@ -80,6 +80,16 @@ def transverse_strain(epsilon, elongation, original_length, new_length, sigma, f
        print("Not enough information provided to calculate transverse strain.")
        return None
 
+    else:
+
+        if (strain(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio)):
+
+            return -1 * strain(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio) * poissons_ratio
+
+        elif (stress(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio)):
+
+            return -1 * (1 / stress(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio)) * poissons_ratio
+
 if __name__ == "__main__":
 
     print(yield_strength(None, None, 5, None, None, 30000 * 9.81, 3, 20000000000, None))
