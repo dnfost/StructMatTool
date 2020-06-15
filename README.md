@@ -14,7 +14,7 @@ Project-specific inquiries can be sent to structmattool@gmail.com
 - Strain [ADDED]
 - Stress [ADDED]
 - Yield Strength [ADDED]
-- Transverse Strain
+- Transverse Strain [ADDED]
 - Transverse Stress
 - Shear Stress
 - Shear Strain
