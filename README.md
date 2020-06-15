@@ -15,8 +15,7 @@ Project-specific inquiries can be sent to structmattool@gmail.com
 - Stress [ADDED]
 - Yield Strength [ADDED]
 - Transverse Strain [ADDED]
-- Shear Stress
-- Shear Strain
+- Shear Stress [ADDED]
 - Shear Modulus (Isotropic Materials)
 - Biaxial Load Strain
 - Biaxial Load Stress
