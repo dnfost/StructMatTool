@@ -1,6 +1,6 @@
 # Want to add classes for a "material" with attributes of all variables in equations below
 
-def strain(elongation, original_length, new_length, sigma, force, area, elastic_modulus):
+def strain(elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio):
 
     if(epsilon):
 
@@ -35,7 +35,7 @@ def strain(elongation, original_length, new_length, sigma, force, area, elastic_
         print("Not enough information provided to calculate strain.")
         return None
 
-def stress(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus):
+def stress(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio):
 
     if(sigma):
 
@@ -43,15 +43,15 @@ def stress(epsilon, elongation, original_length, new_length, sigma, force, area,
     
     elif(elongation and original_length and elastic_modulus):
 
-        return elastic_modulus * strain(elongation, original_length, None, None, None, None, None)
+        return elastic_modulus * strain(elongation, original_length, None, None, None, None, None, None)
 
     elif(elongation and new_length and elastic_modulus):
 
-        return elastic_modulus * strain(elongation, None, new_length, None, None, None, None)
+        return elastic_modulus * strain(elongation, None, new_length, None, None, None, None, None)
 
     elif(original_length and new_length and elastic_modulus):
 
-        return elastic_modulus * strain(None, original_length, new_length, None, None, None, None)
+        return elastic_modulus * strain(None, original_length, new_length, None, None, None, None, None)
 
     elif(force and area):
 
@@ -62,7 +62,7 @@ def stress(epsilon, elongation, original_length, new_length, sigma, force, area,
         print("Not enough information provided to calculate stress.")
         return None
 
-def yield_strength(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus):
+def yield_strength(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio):
 
     if (elastic_modulus):
 
@@ -73,6 +73,13 @@ def yield_strength(epsilon, elongation, original_length, new_length, sigma, forc
        print("Not enough information provided to calculate yield strength.")
        return None 
 
+def transverse_strain(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio):
+
+    if not poissons_ratio:
+        
+       print("Not enough information provided to calculate transverse strain.")
+       return None
+
 if __name__ == "__main__":
 
-    print(yield_strength(None, None, 5, None, None, 30000 * 9.81, 3, 20000000000))
+    print(yield_strength(None, None, 5, None, None, 30000 * 9.81, 3, 20000000000, None))
