@@ -51,6 +51,10 @@ def stress(epsilon, elongation, original_length, new_length, sigma, force, area,
 
         return elastic_modulus * strain(None, original_length, new_length, None, None, None, None)
 
+    elif(force and area):
+
+        return (force / area)
+
 if __name__ == "__main__":
 
     print(stress(None, 2, 2.02, None, None, None, 1600000000))
