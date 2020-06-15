@@ -16,7 +16,7 @@ Project-specific inquiries can be sent to structmattool@gmail.com
 - Yield Strength [ADDED]
 - Transverse Strain [ADDED]
 - Shear Stress [ADDED]
-- Shear Modulus (Isotropic Materials)
+- Shear Modulus (Isotropic Materials) [ADDED]
 - Biaxial Load Strain
 - Biaxial Load Stress
 - Coefficient of Thermal Expansion
