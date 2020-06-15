@@ -109,6 +109,19 @@ def shear_stress(epsilon, elongation, original_length, new_length, sigma, force,
        print("Not enough information provided to calculate shear stress.")
        return None
 
-if __name__ == "__main__":
+def shear_modulus_isotropic(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio, tau, shear_force, gamma, shear_modulus, if_isotropic):
 
-    print(yield_strength(None, None, 5, None, None, 30000 * 9.81, 3, 20000000000, None, None))
+    if not (if_isotropic):
+
+        print("No data currently available to calculate shear modulus.")
+
+    else:
+
+        if (elastic_modulus and poissons_ratio):
+
+            return elastic_modulus / (2 * (1 + poissons_ratio))
+
+        else:
+
+            print("Not enough information provided to calculate shear modulus.")
+            return None 
