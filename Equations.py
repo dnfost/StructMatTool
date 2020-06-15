@@ -1,6 +1,6 @@
 # Want to add classes for a "material" with attributes of all variables in equations below
 
-def strain(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio, tau, shear_force, gamma, shear_modulus):
+def strain(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio, tau, shear_force, gamma, shear_modulus, if_isotropic):
 
     if(epsilon):
 
@@ -35,7 +35,7 @@ def strain(epsilon, elongation, original_length, new_length, sigma, force, area,
         print("Not enough information provided to calculate strain.")
         return None
 
-def stress(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio, tau, shear_force, gamma, shear_modulus):
+def stress(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio, tau, shear_force, gamma, shear_modulus, if_isotropic):
 
     if(sigma):
 
@@ -43,15 +43,15 @@ def stress(epsilon, elongation, original_length, new_length, sigma, force, area,
     
     elif(elongation and original_length and elastic_modulus):
 
-        return elastic_modulus * strain(elongation, original_length, None, None, None, None, None, None, None, None, None, None, None)
+        return elastic_modulus * strain(elongation, original_length, None, None, None, None, None, None, None, None, None, None, None, None)
 
     elif(elongation and new_length and elastic_modulus):
 
-        return elastic_modulus * strain(elongation, None, new_length, None, None, None, None, None, None, None, None, None, None)
+        return elastic_modulus * strain(elongation, None, new_length, None, None, None, None, None, None, None, None, None, None, None)
 
     elif(original_length and new_length and elastic_modulus):
 
-        return elastic_modulus * strain(None, original_length, new_length, None, None, None, None, None, None, None, None, None, None)
+        return elastic_modulus * strain(None, original_length, new_length, None, None, None, None, None, None, None, None, None, None, None)
 
     elif(force and area):
 
@@ -62,7 +62,7 @@ def stress(epsilon, elongation, original_length, new_length, sigma, force, area,
         print("Not enough information provided to calculate stress.")
         return None
 
-def yield_strength(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio, tau, shear_force, gamma, shear_modulus):
+def yield_strength(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio, tau, shear_force, gamma, shear_modulus, if_isotropic):
 
     if (elastic_modulus):
 
@@ -73,7 +73,7 @@ def yield_strength(epsilon, elongation, original_length, new_length, sigma, forc
        print("Not enough information provided to calculate yield strength.")
        return None 
 
-def transverse_strain(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio, tau, shear_force, gamma, shear_modulus):
+def transverse_strain(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio, tau, shear_force, gamma, shear_modulus, if_isotropic):
 
     if not poissons_ratio:
         
@@ -82,15 +82,15 @@ def transverse_strain(epsilon, elongation, original_length, new_length, sigma, f
 
     else:
 
-        if (strain(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio, tau, shear_force, gamma, shear_modulus)):
+        if (strain(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio, tau, shear_force, gamma, shear_modulus, if_isotropic)):
 
-            return -1 * strain(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio, tau, shear_force, gamma, shear_modulus) * poissons_ratio
+            return -1 * strain(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio, tau, shear_force, gamma, shear_modulus, if_isotropic) * poissons_ratio
 
-        elif (stress(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio, tau, shear_force, gamma, shear_modulus)):
+        elif (stress(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio, tau, shear_force, gamma, shear_modulus, if_isotropic)):
 
-            return -1 * (1 / stress(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio, tau, shear_force, gamma, shear_modulus)) * poissons_ratio
+            return -1 * (1 / stress(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio, tau, shear_force, gamma, shear_modulus, if_isotropic)) * poissons_ratio
 
-def shear_stress(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio, tau, shear_force, gamma, shear_modulus): 
+def shear_stress(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio, tau, shear_force, gamma, shear_modulus, if_isotropic): 
 
     if (tau):
 
@@ -111,4 +111,4 @@ def shear_stress(epsilon, elongation, original_length, new_length, sigma, force,
 
 if __name__ == "__main__":
 
-    print(yield_strength(None, None, 5, None, None, 30000 * 9.81, 3, 20000000000, None))
+    print(yield_strength(None, None, 5, None, None, 30000 * 9.81, 3, 20000000000, None, None))
