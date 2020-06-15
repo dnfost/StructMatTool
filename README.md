@@ -15,7 +15,6 @@ Project-specific inquiries can be sent to structmattool@gmail.com
 - Stress [ADDED]
 - Yield Strength [ADDED]
 - Transverse Strain [ADDED]
-- Transverse Stress
 - Shear Stress
 - Shear Strain
 - Shear Modulus (Isotropic Materials)
