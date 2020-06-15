@@ -29,6 +29,12 @@ def strain(elongation, original_length, new_length, sigma, force, area, elastic_
         print("Not enough information provided to calculate strain.")
         return None
 
+def stress(elongation, original_length, new_length, sigma, force, area, elastic_modulus):
+
+    if (elongation and original_length and elastic_modulus):
+
+        return elastic_modulus * strain(elongation, original_length, None, None, None, None, None)
+
 if __name__ == "__main__":
 
-    print(strain(None, 5, None, None, 294300, 3, 20000000000))
+    print(stress(0.02, 2, 2.02, None, None, None, 1600000000))
