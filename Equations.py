@@ -1,3 +1,5 @@
+# Want to add classes for a "material" with attributes of all variables in equations below
+
 def strain(elongation, original_length, new_length, sigma, force, area, elastic_modulus):
 
     if(epsilon):
@@ -55,6 +57,22 @@ def stress(epsilon, elongation, original_length, new_length, sigma, force, area,
 
         return (force / area)
 
+    else:
+
+        print("Not enough information provided to calculate stress.")
+        return None
+
+def yield_strength(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus):
+
+    if (elastic_modulus):
+
+        return elastic_modulus * 0.02
+
+    else:
+
+       print("Not enough information provided to calculate yield strength.")
+       return None 
+
 if __name__ == "__main__":
 
-    print(stress(None, 2, 2.02, None, None, None, 1600000000))
+    print(yield_strength(None, None, 5, None, None, 30000 * 9.81, 3, 20000000000))
