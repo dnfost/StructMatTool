@@ -12,7 +12,7 @@ Project-specific inquiries can be sent to structmattool@gmail.com
 
 # Equations
 - Strain [ADDED]
-- Stress
+- Stress [ADDED]
 - Yield Strength
 - Transverse Strain
 - Transverse Stress
