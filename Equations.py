@@ -199,3 +199,14 @@ def mod_of_mixtures(epsilon, elongation, original_length, new_length, sigma, for
     else:
 
         return (mod_fibre * vol_fibre + (1 - vol_fibre) * mod_matrix)
+
+def hoop_stress(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio, tau, shear_force, gamma, shear_modulus, if_isotropic, sigma_x, sigma_y, coeff_thermal, delta_pressure, radius, thickness):
+
+    if not (delta_pressure and radius and thickness):
+
+        print("Not enough information provided to calculate hoop stress.")
+        return None
+
+    else:
+
+        return (delta_pressure * radius) / thickness
