@@ -232,3 +232,14 @@ def hoop_strain(epsilon, elongation, original_length, new_length, sigma, force, 
     else:
 
         return ((hoop_stress(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio, tau, shear_force, gamma, shear_modulus, if_isotropic, sigma_x, sigma_y, coeff_thermal, delta_pressure, radius, thickness) / elastic_modulus) * (1 - (poissons_ratio / 2)))
+
+def long_strain(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio, tau, shear_force, gamma, shear_modulus, if_isotropic, sigma_x, sigma_y, coeff_thermal, delta_pressure, radius, thickness):
+
+    if not (hoop_stress(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio, tau, shear_force, gamma, shear_modulus, if_isotropic, sigma_x, sigma_y, coeff_thermal, delta_pressure, radius, thickness) and poissons_ratio and elastic_modulus):
+
+        print("Not enough information provided to calculate longitudinal strain.")
+        return None
+
+    else:
+
+       return ((hoop_stress(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio, tau, shear_force, gamma, shear_modulus, if_isotropic, sigma_x, sigma_y, coeff_thermal, delta_pressure, radius, thickness) / elastic_modulus) * (0.5 - poissons_ratio))
