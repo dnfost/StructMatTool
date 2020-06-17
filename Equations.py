@@ -372,9 +372,20 @@ def axial_spring_constant(epsilon, elongation, original_length, new_length, sigm
 
     if not (elastic_modulus and area and new_length):
 
-        print("Not enough information provided to calculate allowable stress.")
+        print("Not enough information provided to calculate axial spring constant.")
         return None
 
     else:
 
-        return elastic_modulus * area / new_length        
+        return elastic_modulus * area / new_length
+
+def lateral_spring_constant(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio, tau, shear_force, gamma, shear_modulus, if_isotropic, sigma_x, sigma_y, coeff_thermal, delta_pressure, radius, thickness, forces, sigma_ult, spring_constant, mass, acc_x, acc_y, moment_of_area_2, fos):
+
+    if not (elastic_modulus and moment_of_area_2 and new_length):
+
+        print("Not enough information provided to calculate lateral spring constant.")
+        return None
+
+    else:
+
+        return 3 * elastic_modulus * moment_of_area_2 / new_length ** 3
