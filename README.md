@@ -17,8 +17,8 @@ Project-specific inquiries can be sent to structmattool@gmail.com
 - Transverse Strain [ADDED]
 - Shear Stress [ADDED]
 - Shear Modulus (Isotropic Materials) [ADDED]
-- Biaxial Load Strain
-- Biaxial Load Stress
+- Biaxial Load Strain (x direction) [ADDED]
+- Biaxial Load Strain (y direction) [ADDED]
 - Coefficient of Thermal Expansion
 - Thermal Strain
 - Rule of Mixtures
