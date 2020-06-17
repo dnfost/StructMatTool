@@ -19,7 +19,6 @@ Project-specific inquiries can be sent to structmattool@gmail.com
 - Shear Modulus (Isotropic Materials) [ADDED]
 - Biaxial Load Strain (x direction) [ADDED]
 - Biaxial Load Strain (y direction) [ADDED]
-- Coefficient of Thermal Expansion
 - Thermal Strain
 - Rule of Mixtures
 - Hoop Stress
