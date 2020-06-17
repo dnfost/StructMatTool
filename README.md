@@ -22,7 +22,7 @@ Project-specific inquiries can be sent to structmattool@gmail.com
 - Thermal Strain [ADDED]
 - Rule of Mixtures (Density) (Composites) [ADDED]
 - Rule of Mixtures (Elastic Modulus) (Composites) [ADDED]
-- Hoop Stress
+- Hoop Stress [ADDED]
 - Longitudinal Stress
 - Hoop Strain
 - Longitudinal Strain
