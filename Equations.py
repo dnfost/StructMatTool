@@ -400,5 +400,14 @@ def stress_concentration_factor(epsilon, elongation, original_length, new_length
     else:
 
         return sigma_peak / sigma_nom
-        
-               
+
+def stress_intensity_factor(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio, tau, shear_force, gamma, shear_modulus, if_isotropic, sigma_x, sigma_y, coeff_thermal, delta_pressure, radius, thickness, forces, sigma_ult, spring_constant, mass, acc_x, acc_y, moment_of_area_2, fos, sigma_peak, sigma_nom, crack_size):
+
+    if not (sigma and crack_size):
+
+        print("Not enough information provided to calculate stress intensity factor.")
+        return None
+
+    else:
+
+        return sigma * math.sqrt(math.pi * crack_size)     
