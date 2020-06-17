@@ -34,7 +34,7 @@ Project-specific inquiries can be sent to structmattool@gmail.com
 - Natural Frequency [ADDED]
 - Axial Stress [ADDED]
 - Lateral Stress [ADDED]
-- Total Stress
+- Total Stress [ADDED]
 - Allowable Stress
 - Axial Spring Constant
 - Lateral Spring Constant
