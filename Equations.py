@@ -166,3 +166,14 @@ def biaxial_strain_y(epsilon, elongation, original_length, new_length, sigma, fo
 
             print("Not enough information provided to calculate biaxial strain in loading direction.")
             return None
+
+def thermal_strain(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio, tau, shear_force, gamma, shear_modulus, if_isotropic, sigma_x, sigma_y, coeff_thermal, delta_temp):
+
+    if not (coeff_thermal and delta_temp):
+
+        print("Not enough information provided to calculate thermal strain.")
+        return None
+
+    else:
+
+        return coeff_thermal * delta_temp      
