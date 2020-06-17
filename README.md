@@ -39,6 +39,7 @@ Project-specific inquiries can be sent to structmattool@gmail.com
 - Axial Spring Constant [ADDED]
 - Lateral Spring Constant [ADDED]
 - Stress Concentration Factor [ADDED]
+- Stress Intensity Factor [ADDED]
 - Critical Crack Stress
 - Net Section Tension Failure
 - Bearing Failure
