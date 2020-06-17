@@ -36,7 +36,7 @@ Project-specific inquiries can be sent to structmattool@gmail.com
 - Lateral Stress [ADDED]
 - Total Stress [ADDED]
 - Allowable Stress [ADDED]
-- Axial Spring Constant
+- Axial Spring Constant [ADDED]
 - Lateral Spring Constant
 - Stress Concentration Factor
 - Critical Crack Stress
