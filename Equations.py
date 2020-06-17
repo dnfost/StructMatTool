@@ -323,3 +323,14 @@ def natural_frequency(epsilon, elongation, original_length, new_length, sigma, f
     else:
 
         return ((1/ (2 * math.pi)) * math.sqrt(k / m))
+
+def axial_stress(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio, tau, shear_force, gamma, shear_modulus, if_isotropic, sigma_x, sigma_y, coeff_thermal, delta_pressure, radius, thickness, forces, sigma_ult, spring_constant, mass, acc_x):
+
+    if not (acc_x and mass and area):
+
+        print("Not enough information provided to calculate axial stress.")
+        return None
+
+    else:
+
+        return acc_x * mass / area      
