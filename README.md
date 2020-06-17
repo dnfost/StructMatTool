@@ -38,7 +38,7 @@ Project-specific inquiries can be sent to structmattool@gmail.com
 - Allowable Stress [ADDED]
 - Axial Spring Constant [ADDED]
 - Lateral Spring Constant [ADDED]
-- Stress Concentration Factor
+- Stress Concentration Factor [ADDED]
 - Critical Crack Stress
 - Net Section Tension Failure
 - Bearing Failure
