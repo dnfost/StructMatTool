@@ -23,7 +23,7 @@ Project-specific inquiries can be sent to structmattool@gmail.com
 - Rule of Mixtures (Density) (Composites) [ADDED]
 - Rule of Mixtures (Elastic Modulus) (Composites) [ADDED]
 - Hoop Stress [ADDED]
-- Longitudinal Stress
+- Longitudinal Stress [ADDED]
 - Hoop Strain
 - Longitudinal Strain
 - Torsional Moment
