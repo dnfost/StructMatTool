@@ -355,4 +355,15 @@ def total_stress(epsilon, elongation, original_length, new_length, sigma, force,
 
     else:
 
-        return axial_stress(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio, tau, shear_force, gamma, shear_modulus, if_isotropic, sigma_x, sigma_y, coeff_thermal, delta_pressure, radius, thickness, forces, sigma_ult, spring_constant, mass, acc_x, acc_y, moment_of_area_2) + lateral_stress(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio, tau, shear_force, gamma, shear_modulus, if_isotropic, sigma_x, sigma_y, coeff_thermal, delta_pressure, radius, thickness, forces, sigma_ult, spring_constant, mass, acc_x, acc_y, moment_of_area_2)       
+        return axial_stress(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio, tau, shear_force, gamma, shear_modulus, if_isotropic, sigma_x, sigma_y, coeff_thermal, delta_pressure, radius, thickness, forces, sigma_ult, spring_constant, mass, acc_x, acc_y, moment_of_area_2) + lateral_stress(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio, tau, shear_force, gamma, shear_modulus, if_isotropic, sigma_x, sigma_y, coeff_thermal, delta_pressure, radius, thickness, forces, sigma_ult, spring_constant, mass, acc_x, acc_y, moment_of_area_2)
+
+def allowable_stress(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio, tau, shear_force, gamma, shear_modulus, if_isotropic, sigma_x, sigma_y, coeff_thermal, delta_pressure, radius, thickness, forces, sigma_ult, spring_constant, mass, acc_x, acc_y, moment_of_area_2, fos):
+
+    if not (sigma_ult and fos):
+
+        print("Not enough information provided to calculate allowable stress.")
+        return None
+
+    else:
+
+        return sigma_ult / fos
