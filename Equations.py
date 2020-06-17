@@ -188,3 +188,14 @@ def rho_of_mixtures(epsilon, elongation, original_length, new_length, sigma, for
     else:
 
         return (rho_fibre * vol_fibre + rho_matrix * rho_matrix)
+
+def mod_of_mixtures(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio, tau, shear_force, gamma, shear_modulus, if_isotropic, sigma_x, sigma_y, coeff_thermal, delta_temp, rho_fibre, vol_fibre, mod_fibre, rho_matrix, vol_matrix, mod_matrix):
+
+    if not (mod_fibre and mod_matrix and vol_fibre):
+
+        print("Not enough information provided to calculate elastic modulus of composite.")
+        return None
+
+    else:
+
+        return (mod_fibre * vol_fibre + (1 - vol_fibre) * mod_matrix)
