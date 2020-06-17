@@ -20,7 +20,7 @@ Project-specific inquiries can be sent to structmattool@gmail.com
 - Biaxial Load Strain (x direction) [ADDED]
 - Biaxial Load Strain (y direction) [ADDED]
 - Thermal Strain [ADDED]
-- Rule of Mixtures
+- Rule of Mixtures [ADDED]
 - Hoop Stress
 - Longitudinal Stress
 - Hoop Strain
