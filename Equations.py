@@ -301,3 +301,25 @@ def tension_failure(epsilon, elongation, original_length, new_length, sigma, for
     else:
 
         return sigma_ult * area
+
+def buckling_failure(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio, tau, shear_force, gamma, shear_modulus, if_isotropic, sigma_x, sigma_y, coeff_thermal, delta_pressure, radius, thickness, forces, sigma_ult):
+
+    if not (elastic_modulus and thickness and new_length):
+
+        print("Not enough information provided to calculate buckling failure load.")
+        return None
+
+    else:
+
+        return (elastic_modulus * thickness ** 3) / new_length
+
+def natural_frequency(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio, tau, shear_force, gamma, shear_modulus, if_isotropic, sigma_x, sigma_y, coeff_thermal, delta_pressure, radius, thickness, forces, sigma_ult, spring_constant, mass):
+
+    if not (spring_constant and mass):
+
+        print("Not enough information provided to calculate natural frequency.")
+        return None
+
+    else:
+
+        return ((1/ (2 * math.pi)) * math.sqrt(k / m))
