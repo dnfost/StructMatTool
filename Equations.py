@@ -290,3 +290,14 @@ def transverse_shear_force(epsilon, elongation, original_length, new_length, sig
             total += force
 
         return total
+
+def tension_failure(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio, tau, shear_force, gamma, shear_modulus, if_isotropic, sigma_x, sigma_y, coeff_thermal, delta_pressure, radius, thickness, forces, sigma_ult):
+
+    if not (area and sigma_ult):
+
+        print("Not enough information provided to calculate tensile failure load.")
+        return None
+
+    else:
+
+        return sigma_ult * area
