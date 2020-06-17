@@ -27,7 +27,7 @@ Project-specific inquiries can be sent to structmattool@gmail.com
 - Hoop Strain [ADDED]
 - Longitudinal Strain [ADDED]
 - Torsional Moment [ADDED]
-- Shear Flow
+- Shear Flow [ADDED]
 - Transverse Shear Force
 - Normal Forces in Spar Caps
 - Tension Failure
