@@ -29,7 +29,7 @@ Project-specific inquiries can be sent to structmattool@gmail.com
 - Torsional Moment [ADDED]
 - Shear Flow [ADDED]
 - Transverse Shear Force [ADDED]
-- Tension Failure
+- Tension Failure [ADDED]
 - Buckling Failure
 - Natural Frequency
 - Axial Stress
