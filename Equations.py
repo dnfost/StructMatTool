@@ -176,4 +176,15 @@ def thermal_strain(epsilon, elongation, original_length, new_length, sigma, forc
 
     else:
 
-        return coeff_thermal * delta_temp      
+        return coeff_thermal * delta_temp
+
+def rho_of_mixtures(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio, tau, shear_force, gamma, shear_modulus, if_isotropic, sigma_x, sigma_y, coeff_thermal, delta_temp, rho_fibre, vol_fibre, rho_matrix, vol_matrix):
+
+    if not (rho_fibre and vol_fibre and rho_matrix and vol_matrix):
+
+        print("Not enough information provided to calculate density of composite.")
+        return None
+
+    else:
+
+        return (rho_fibre * vol_fibre + rho_matrix * rho_matrix)
