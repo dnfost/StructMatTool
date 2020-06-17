@@ -210,3 +210,14 @@ def hoop_stress(epsilon, elongation, original_length, new_length, sigma, force, 
     else:
 
         return (delta_pressure * radius) / thickness
+
+def long_stress(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio, tau, shear_force, gamma, shear_modulus, if_isotropic, sigma_x, sigma_y, coeff_thermal, delta_pressure, radius, thickness):
+
+    if not (hoop_stress(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio, tau, shear_force, gamma, shear_modulus, if_isotropic, sigma_x, sigma_y, coeff_thermal, delta_pressure, radius, thickness)):
+
+        print("Not enough information provided to calculate hoop stress.")
+        return None
+
+    else:
+
+        return (hoop_stress(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio, tau, shear_force, gamma, shear_modulus, if_isotropic, sigma_x, sigma_y, coeff_thermal, delta_pressure, radius, thickness) * 0.5)       
