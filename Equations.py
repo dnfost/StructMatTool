@@ -367,3 +367,14 @@ def allowable_stress(epsilon, elongation, original_length, new_length, sigma, fo
     else:
 
         return sigma_ult / fos
+
+def axial_spring_constant(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio, tau, shear_force, gamma, shear_modulus, if_isotropic, sigma_x, sigma_y, coeff_thermal, delta_pressure, radius, thickness, forces, sigma_ult, spring_constant, mass, acc_x, acc_y, moment_of_area_2, fos):
+
+    if not (elastic_modulus and area and new_length):
+
+        print("Not enough information provided to calculate allowable stress.")
+        return None
+
+    else:
+
+        return elastic_modulus * area / new_length        
