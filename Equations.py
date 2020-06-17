@@ -272,4 +272,21 @@ def shear_flow(epsilon, elongation, original_length, new_length, sigma, force, a
 
         elif (torsional_moment(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio, tau, shear_force, gamma, shear_modulus, if_isotropic, sigma_x, sigma_y, coeff_thermal, delta_pressure, radius, thickness) and area):
 
-            return (torsional_moment(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio, tau, shear_force, gamma, shear_modulus, if_isotropic, sigma_x, sigma_y, coeff_thermal, delta_pressure, radius, thickness) / (2 * area))      
+            return (torsional_moment(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio, tau, shear_force, gamma, shear_modulus, if_isotropic, sigma_x, sigma_y, coeff_thermal, delta_pressure, radius, thickness) / (2 * area))
+
+def transverse_shear_force(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio, tau, shear_force, gamma, shear_modulus, if_isotropic, sigma_x, sigma_y, coeff_thermal, delta_pressure, radius, thickness, forces):
+
+    if not forces:
+
+        print("Not enough information provided to calculate transverse shear forces.")
+        return None
+
+    else:
+
+        total = 0
+
+        for force in forces:
+
+            total += force
+
+        return total
