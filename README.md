@@ -28,7 +28,7 @@ Project-specific inquiries can be sent to structmattool@gmail.com
 - Longitudinal Strain [ADDED]
 - Torsional Moment [ADDED]
 - Shear Flow [ADDED]
-- Transverse Shear Force
+- Transverse Shear Force [ADDED]
 - Normal Forces in Spar Caps
 - Tension Failure
 - Buckling Failure
