@@ -32,8 +32,8 @@ Project-specific inquiries can be sent to structmattool@gmail.com
 - Tension Failure [ADDED]
 - Buckling Failure [ADDED]
 - Natural Frequency [ADDED]
-- Axial Stress
-- Lateral Stress
+- Axial Stress [ADDED]
+- Lateral Stress [ADDED]
 - Total Stress
 - Allowable Stress
 - Axial Spring Constant
