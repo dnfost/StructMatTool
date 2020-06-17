@@ -333,4 +333,15 @@ def axial_stress(epsilon, elongation, original_length, new_length, sigma, force,
 
     else:
 
-        return acc_x * mass / area      
+        return acc_x * mass / area
+
+def lateral_stress(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio, tau, shear_force, gamma, shear_modulus, if_isotropic, sigma_x, sigma_y, coeff_thermal, delta_pressure, radius, thickness, forces, sigma_ult, spring_constant, mass, acc_x, acc_y, moment_of_area_2):
+
+    if not (acc_y and mass and new_length and radius and moment_of_area_2):
+
+        print("Not enough information provided to calculate lateral stress.")
+        return None
+
+    else:
+
+        return (acc_y * mass * new_length * radius) / moment_of_area_2    
