@@ -24,8 +24,8 @@ Project-specific inquiries can be sent to structmattool@gmail.com
 - Rule of Mixtures (Elastic Modulus) (Composites) [ADDED]
 - Hoop Stress [ADDED]
 - Longitudinal Stress [ADDED]
-- Hoop Strain
-- Longitudinal Strain
+- Hoop Strain [ADDED]
+- Longitudinal Strain [ADDED]
 - Torsional Moment
 - Shear Flow
 - Transverse Shear Force
