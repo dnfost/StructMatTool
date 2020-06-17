@@ -31,7 +31,7 @@ Project-specific inquiries can be sent to structmattool@gmail.com
 - Transverse Shear Force [ADDED]
 - Tension Failure [ADDED]
 - Buckling Failure [ADDED]
-- Natural Frequency
+- Natural Frequency [ADDED]
 - Axial Stress
 - Lateral Stress
 - Total Stress
