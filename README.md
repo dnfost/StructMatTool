@@ -40,7 +40,6 @@ Project-specific inquiries can be sent to structmattool@gmail.com
 - Lateral Spring Constant [ADDED]
 - Stress Concentration Factor [ADDED]
 - Stress Intensity Factor [ADDED]
-- Critical Crack Stress
 - Net Section Tension Failure
 - Bearing Failure
 - Shear Tear Out Failure
