@@ -389,3 +389,16 @@ def lateral_spring_constant(epsilon, elongation, original_length, new_length, si
     else:
 
         return 3 * elastic_modulus * moment_of_area_2 / new_length ** 3
+
+def stress_concentration_factor(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio, tau, shear_force, gamma, shear_modulus, if_isotropic, sigma_x, sigma_y, coeff_thermal, delta_pressure, radius, thickness, forces, sigma_ult, spring_constant, mass, acc_x, acc_y, moment_of_area_2, fos, sigma_peak, sigma_nom):
+
+    if not (sigma_peak and sigma_nom):
+
+        print("Not enough information provided to calculate stress concentration factor.")
+        return None
+
+    else:
+
+        return sigma_peak / sigma_nom
+        
+               
