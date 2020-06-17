@@ -1,3 +1,5 @@
+import math
+
 # Want to add classes for a "material" with attributes of all variables in equations below
 
 def strain(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio, tau, shear_force, gamma, shear_modulus, if_isotropic, sigma_x, sigma_y, coeff_thermal):
@@ -243,3 +245,16 @@ def long_strain(epsilon, elongation, original_length, new_length, sigma, force, 
     else:
 
        return ((hoop_stress(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio, tau, shear_force, gamma, shear_modulus, if_isotropic, sigma_x, sigma_y, coeff_thermal, delta_pressure, radius, thickness) / elastic_modulus) * (0.5 - poissons_ratio))
+
+def torsional_moment(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio, tau, shear_force, gamma, shear_modulus, if_isotropic, sigma_x, sigma_y, coeff_thermal, delta_pressure, radius, thickness):
+
+    if not (shear_stress(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio, tau, shear_force, gamma, shear_modulus, if_isotropic, sigma_x, sigma_y, coeff_thermal, delta_pressure, radius, thickness) and radius and thickness):
+
+        print("Not enough information provided to calculate torsional moment.")
+        return None
+
+    else:
+
+        return shear_stress(epsilon, elongation, original_length, new_length, sigma, force, area, elastic_modulus, poissons_ratio, tau, shear_force, gamma, shear_modulus, if_isotropic, sigma_x, sigma_y, coeff_thermal, delta_pressure, radius, thickness) * math.pi * (radius ** 2) * thickness
+
+    
